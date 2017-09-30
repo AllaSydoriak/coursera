@@ -11,4 +11,13 @@ $(document).ready(function(){
          $("#carousel-button").children("span").addClass('fa-pause');
      }
  });
+
+   $("#reservation-button").click(function(){
+     $('#reservationModal').modal('show');
+   });
+
+   $("#login-button").click(function(){
+     $('#loginModal').modal('show');
+   });
+
 });
