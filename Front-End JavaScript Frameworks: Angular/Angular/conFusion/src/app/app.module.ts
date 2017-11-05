@@ -22,6 +22,7 @@ import { LeaderService } from './services/leader.service';
 import { PromotionService } from './services/promotion.service';
 
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FooterComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,6 +44,9 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
     FormsModule,
     HttpModule,
     AppRoutingModule
+  ],
+  entryComponents: [
+    LoginComponent
   ],
   providers: [
     DishService,
