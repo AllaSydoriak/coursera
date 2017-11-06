@@ -8,6 +8,9 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import { baseURL } from './shared/baseurl';
+import { ProcessHttpmsgService } from './services/process-httpmsg.service';
+
 import 'hammerjs';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
@@ -53,7 +56,9 @@ import { LoginComponent } from './login/login.component';
   providers: [
     DishService,
     LeaderService,
-    PromotionService
+    PromotionService,
+    {provide: 'BaseURL', useValue: baseURL},
+    ProcessHttpmsgService
   ],
   bootstrap: [AppComponent]
 })
