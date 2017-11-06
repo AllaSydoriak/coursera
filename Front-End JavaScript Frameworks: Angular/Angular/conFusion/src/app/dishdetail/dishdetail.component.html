@@ -37,9 +37,45 @@
             <p md-line>--{{item.author}} {{item.date | date}}</p>
           </md-list-item>
         </md-list>
+
+        <md-list-item *ngIf="commentForm.valid">
+          <p md-line>{{commentForm.value.comment}}</p>
+          <p md-line>{{commentForm.value.rating}} Stars</p>
+          <p md-line>--{{commentForm.value.author}}</p>
+        </md-list-item>
+
+        <form novalidate [formGroup]="commentForm" (ngSubmit)="onSubmit()">
+          <p>
+            <md-input-container fxFlex class="full-width" dividerColor="{{(formErrors.author) ? 'warn' : 'primary'}}">
+                <input mdInput formControlName="author" placeholder="Name" type="text" required>
+                <md-hint>
+                  <span [hidden]="!(formErrors.author)">
+                    {{formErrors.author}}</span>
+                </md-hint>
+            </md-input-container>
+          </p>
+          <p>
+            <md-slider formControlName="rating" min="1" max="5" step="1" [value]="rating" thumbLabel tickInterval="1">
+            </md-slider>
+          </p>
+          <p>
+            <md-input-container fxFlex class="full-width" dividerColor="{{(formErrors.comment) ? 'warn' : 'primary'}}">
+                <textarea mdInput formControlName="comment" placeholder="Comment" rows=8 required></textarea>
+                <md-hint>
+                  <span [hidden]="!(formErrors.comment)">
+                    {{formErrors.comment}}</span>
+                </md-hint>
+            </md-input-container>
+          </p>
+          <button type="submit" md-button class="background-primary text-floral-white"
+            [disabled]="commentForm.invalid">Submit</button>
+        </form>
     </div>
     <div [hidden]="dish">
         <md-spinner></md-spinner><h4>Loading . . . Please Wait</h4>
     </div>
+
+
+
 
 </div>
