@@ -23,7 +23,7 @@ export default class Dishdetail extends Component {
       <div>
         <h4>Comments</h4>
         {comments !== null ? (
-          <div>
+          <div className="container">
             <ul class="list-unstyled">
               {comments.map(item => (
                 <li>
