@@ -1,8 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 import { Link } from "react-router-dom";
->>>>>>> 00659008a7b864fb5a5d3bf9609144e7e1649375
 
 function Footer(props) {
   return (
