@@ -9,8 +9,12 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-popper": "^0.9.2",
+<<<<<<< HEAD
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+=======
+    "react-router-dom": "^4.2.2",
+>>>>>>> 00659008a7b864fb5a5d3bf9609144e7e1649375
     "react-scripts": "2.0.5",
     "reactstrap": "^5.0.0"
   },
