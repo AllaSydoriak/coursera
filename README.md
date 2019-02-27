@@ -1,2 +1,2 @@
 # coursera
-Implementation of different courses from coursera.org.
+Implementation of different courses from coursera.org
